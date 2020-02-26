@@ -1,0 +1,77 @@
+.PCPAutoSuggestInput{
+    list-style-type: none;
+}
+
+.PrimaryCareProvidersWrapper li{
+    list-style: none;
+}
+
+
+.RenderPCPListWrapper{
+    width: 68%;
+    display: block;
+    margin: auto;
+}
+
+
+.RenderPCPListWrapper .PCPListCard{
+    margin: 0;
+}
+
+.PCPListCard{
+    box-sizing: border-box;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    margin-left: -40px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.PCPListCard:empty{
+    display: none;
+}
+
+.PCPListImg {
+    border-radius: 50%;
+    margin: 0 12px;
+}
+
+.PCPListCard:hover{
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.PCPListWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.PCPListWrapper .PCPListCard{
+    width: 50%;
+    margin: 0;
+}
+
+.PCPListWrapper a{
+    text-decoration: none;
+    color: black;
+}
+
+a.PCPListCard{
+    color: black;
+}
+
+@media screen and (max-width: 530){
+    .PCPListCard{
+        font-size: 16px;
+        padding: 0px;
+    }
+
+    .PCPListImg {
+        border-radius: 50%;
+        margin: 0 12px;
+        height: 40px;
+    }
+}

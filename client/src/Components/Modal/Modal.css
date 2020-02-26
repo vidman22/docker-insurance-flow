@@ -1,0 +1,95 @@
+.Modal h1{
+    display: block;
+    margin: auto;
+    clear: both;
+	font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 500;
+	font-size: 44px;
+}
+
+.Modal {
+    position: fixed;
+    z-index: 200;
+    border: 1px solid #eee;
+    box-shadow: 0 0px 9px #ccc;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 1px;
+    box-sizing: border-box;
+    top: 20%;
+    left: 22.5%;
+    width: 55%;
+    transition: all 0.3s ease-out;
+}
+
+
+
+.ModalOpen {
+    animation: openModal 0.4s ease-out forwards;
+}
+
+.ModalClosed {
+    animation: closeModal 1s ease-out forwards;
+}
+
+.TimesCloseModal {
+    float: right;
+}
+
+.TimesCloseModal:hover{
+    color: #55ba80;
+    cursor: pointer;
+}
+
+#MedicareAdvantageOriginal,
+#MedicareButtonAdvantage{
+    margin: 10px;
+    display: inline-block;
+}
+
+.fade-slide-enter-active {
+    animation: openModal 0.4s ease-out forwards;
+}
+
+
+
+.fade-slide-exit-active {
+    animation: closeModal 1s ease-out forwards;
+}
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .Modal{
+        width: 85%;
+        left: 7.5%;
+    }
+}
+@media screen and (max-width: 800px){
+    .Modal{
+        width: 95%;
+        left: 2.5%;
+    }
+}

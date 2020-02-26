@@ -1,0 +1,23 @@
+
+@font-face {
+  font-family: 'brandon-thin';
+  src: local('brandon-thin'), url(./assets/fonts/Brandon_thin.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'brandon-bold';
+  src: local('brandon-bold'), url(./assets/fonts/Brandon_bld.ttf) format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'brandon-regular';
+  src: local('brandon-regular'), url(./assets/fonts/Brandon_reg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'brandon-grotesque-regular';
+  src: local('brandon-grotesque-regular'), url(./assets/fonts/BrandonGrotesque-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'brandon-grotesque-bold';
+  src: local('brandon-grotesque-bold'), url(./assets/fonts/BrandonGrotesque-Bold.ttf) format('truetype');
+  font-weight: bold;
+}

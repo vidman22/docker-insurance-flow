@@ -1,0 +1,96 @@
+.InsuranceExplanationWrapper{
+    display: block;
+    width: 68%;
+    margin: 20px auto;
+    border: 1px solid grey;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: white;
+}
+
+/* .HMOExplanationWrapper,
+.PPOExplanationWrapper,
+.EPOExplanationWrapper{
+    display: inline-block;
+    
+} */
+
+.InsuranceCardWrapper li{
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.InsuranceCardWrapper p{
+    display: block;
+    width: fit-content;
+    margin: 0 35%;
+}
+
+
+img.HMOExplanationImg,
+img.PPOExplanationImg,
+img.EPOExplanationImg{
+    display: block;
+    transition: .2s ease-in;
+    margin: auto;
+}
+
+.InsuranceCardWrapper h3{
+    border-bottom: 1px solid grey;
+}
+
+
+.Enlarge{
+    position: absolute;
+    z-index: 900;
+    animation: enlarge .6s ease-in forwards;
+}
+
+
+@media screen and (max-width: 800px){
+    /* .ChoosePathBoxWrapper{
+        padding: 40px 10px;
+    } */
+    .InsuranceExplanationWrapper{
+     
+        width: 85%;
+       
+    }
+}
+@media screen and (max-width: 530px){
+    /* .ChoosePathBoxWrapper{
+        padding: 40px 10px;
+    } */
+    img.HMOExplanationImg,
+    img.PPOExplanationImg,
+    img.EPOExplanationImg{
+        height: 150px;
+        margin: 0;
+    }
+
+
+    .InsuranceCardWrapper li{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .InsuranceCardWrapper p{
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .InsuranceCardWrapper{
+       padding: 0;
+    }
+
+    .InsuranceExplanationWrapper{
+        display: block;
+        width: 85%;
+        margin: 20px auto;
+    }
+}
+
+

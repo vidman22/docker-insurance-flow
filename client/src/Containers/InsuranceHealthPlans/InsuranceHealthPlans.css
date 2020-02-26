@@ -1,0 +1,489 @@
+.InputWrapper{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 95%;
+}
+
+
+.InputWrapper .fa-search{
+    display: block;
+    /* float: right; */
+    position: absolute;
+    font-size: 30px;
+    top: 22px;
+    left: 81%;
+    /* margin-top: -5%;  */
+    color:#ccc;
+    background-color: white;
+    /* background-size: 30px 30px; */
+}
+
+.InsuranceHealthPlansWrapper {
+    margin: 0 0 0 0px;
+}
+.InsuranceHealthPlansWrapper h2{
+    width: fit-content;
+    display: block;
+    margin: 0;
+}
+
+.ChoosePathButtonWrapper .NotSureButton {
+    /* display: inline-block; */
+    margin: 1px 0 0 0;
+    color: #55ba80;
+}
+
+.NotSureButton:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.react-autosuggest__container{
+    margin: 12px auto;
+    
+    display: block;
+    position: relative;
+    
+    left: 0px;
+    width: 70%;
+    /* clear: both; */
+}
+
+.react-autosuggest__input{
+    display: block;
+    font-family: 'brandon-regular', sans-serif;
+    border-radius: 40px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+    font-size: 24px;
+    -webkit-appearance: none;
+}
+
+.react-autosuggest__input::placeholder{
+    font-weight: lighter;
+}
+
+.react-autosuggest__input:focus{
+    /* border: 1px solid #ccc; */
+    border-radius: 40px 40px 0 0;
+    border-bottom: none;
+    outline: none;
+    box-shadow: 0px 0px 12px 3px #ccc; 
+    
+}
+
+.react-autosuggest__suggestions-container{
+    background-color: white;
+    display: block;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    width: 99.8%;
+    margin: 12px 0px 0 0;
+    padding: 0px;
+    z-index: 99;
+}
+.react-autosuggest__suggestions-container--open{
+    border-top: none;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 8px 12px 3px #ccc; 
+    z-index: 90;
+    max-height: 450px;
+    overflow: scroll;
+    background-color: white;
+    top: -12px;
+}
+
+.react-autosuggest__suggestions-list{
+    display: block;
+    margin: 15px 0;
+    list-style: none;
+}
+
+
+
+#MedicareChoosePathButtonWrapper{
+    margin: 25px 20%;
+}
+
+.ChoosePathBoxWrapper{
+    display: block;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px 20px;
+    font-size: 1.5em;
+    /* margin: 25px 30%; */
+    border: 1px solid grey;
+    border-radius: 12px;
+    animation: fall 1s ease-in forwards;
+}
+
+.ChoosePathButtonWrapper{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 8px auto 14px;
+
+}
+
+.ChoosePathButton{
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 9px 12px 8px;
+    max-width: 80px;
+    text-align: center;
+    
+    margin: 5px;
+    color: white;
+    background-color: #55ba80;
+}
+
+.ChoosePathButton:hover{
+    cursor: pointer;
+    color: black;
+    box-shadow: 0px 0px 4px 4px #eee;
+}
+
+.ChoosePathButton .ToolTipChoosePath {
+    visibility: hidden;
+    display: none;
+    color: black;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    width: 450px;
+    border-radius: 2px;
+    padding: 5px 7px;
+    margin: 29px 0px 0 -250px; 
+    position: absolute;
+    z-index: 1;
+}
+
+.ChoosePathButton:hover .ToolTipChoosePath {
+    visibility: hidden;
+}
+
+.ChoosePathButton .ToolTipChoosePath::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent grey transparent;
+}
+
+.InsuranceListRendered{
+    display: inline-block;
+    height: 30px;
+    padding: 5px 10px;
+    width: 100px;
+    list-style-type: circle;
+}
+
+.InsuranceListRendered:hover{
+    cursor: pointer;
+    background-color: #55ba80;
+
+}
+
+.SuggestionsListRenderedBelowWrapper{
+    display: absolute;
+    top: 40%;
+    
+    width: 68%;
+    margin: auto;
+}
+
+.SuggestionsListRenderedBelowWrapper p{
+    margin: 28px 0 12px 12px;
+    color: #55ba80;
+    font-size: 18px;
+    text-align: left;
+}
+
+.SuggestionsListRenderedBelowItem{
+    height: 30px;
+    padding: 5px 10px 5px 20px;
+    border-bottom: .5px solid grey;
+    width: 85%;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 6px 0px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.SuggestionsListRenderedBelowItem:hover{
+    
+    color: #55ba80;
+    border-bottom: .5px solid #55ba80;
+}
+
+.HealthPlanNotFoundWrapper a{
+    color: #55ba80;
+}
+
+.InsuranceSuggestionsListItem{
+    height: 30px;
+    padding: 5px 10px 5px 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 0 -40px;
+}
+
+.InsuranceSuggestionsListItem:hover{
+    cursor: pointer;
+    /* border-bottom: .3px solid #eee; */
+   
+}
+
+.InsuranceSuggestionsListItem:empty{
+    display: none;
+}
+
+.NoHitButtonWrapper{
+    display: block;
+    margin: auto 0 auto 40%;
+}
+
+.NotFoundWrapper{
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#DidYouMeanButton{
+    display: inline-block;
+    margin-top: 25px;
+    margin-right: 20%;
+}
+
+#InsuranceNotFoundChoosePathButton{
+    display: inline-block;
+    margin-top: 25px;
+    margin-right: 20%;
+}
+
+.fa-arrow-right{
+    position: relative;
+    left: 0;
+    top: 2px;
+    margin: 0px 2px 0 0;
+    color: grey;
+}
+
+.fa-times{
+    cursor: pointer;
+    float: right;
+}
+
+.fa-times:hover{
+    color: #55ba80;
+}
+
+.OtherFlowsButtonWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* position: absolute; */
+    margin: -18px 0 0 18%;
+}
+
+.OtherFlowButton{
+    font-weight: lighter;
+    margin: 18px 0px;
+    width: auto;
+    display: inline-block;
+    padding: 0px 4px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.OtherFlowButton:hover{
+    color: black;
+}
+
+.FlexColumn{
+    flex-direction: column;
+}
+
+.TricareButton,
+.MedicareButton{
+    box-sizing: border-box;
+    max-width: 400px;
+    width: 50%;
+}
+
+@keyframes enlarge {
+    0%{
+        height: 0;
+    }
+
+    100%{
+        height: 400px;
+    }
+}
+
+@keyframes fall {
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 50%;
+    }
+}
+
+@keyframes bounce {
+    0% {
+            
+            left: 0px;
+        }
+
+    50% {  
+            
+            left: 5px;
+        }
+    100% {  
+           
+            left: 0px;
+        }
+  }
+@-webkit-keyframes bounce {
+    0% {
+            
+            left: 0px;
+        }
+
+    50% {  
+            
+            left: 5px;
+        }
+    100% {  
+            
+            left: 0px;
+        }
+  }
+
+
+@media screen and (max-width: 1140px) {
+
+
+
+    .react-autosuggest__container{
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .InputWrapper .fa-search{
+        /* top: 14px; */
+        left: 96%;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    /* .ChoosePathBoxWrapper{
+        padding: 40px 10px;
+    } */
+    .react-autosuggest__input{
+        widows: 100%;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .InputWrapper .fa-search{
+        font-size: 22px;
+        top: 14px;
+        left: 91%;
+    }
+
+    .NoHitButtonWrapper{
+        display: block;
+        margin: auto;
+    }
+
+    .OtherFlowsButtonWrapper{
+        width: 100%;
+        left: 5%;
+        /* margin: 0 0 0 10%; */
+    }
+
+
+    .ChoosePathBoxWrapper{
+        font-size: 1em;
+    }
+
+    .ChoosePathButton{
+        box-sizing: border-box;
+        border-radius: 2px;
+        padding: 6px 10px 6px;
+        vertical-align: middle;
+        text-align: center;
+        margin: 5px;
+        color: white;
+        background-color: #55ba80;
+    }
+
+}
+
+@media screen and (max-width: 530px){
+
+
+    .OtherFlowsButtonWrapper{
+        margin: -10px 0 0 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        
+    }
+    .OtherFlowButton{
+        margin: 4px;
+    }
+    .OtherFlowsButtonWrapper p{
+        margin: 0;
+        display: none;
+    }
+
+    .ChoosePathBoxWrapper{
+        width: 60%;
+        margin: auto;
+        font-size: 14px;
+    }
+    .ChoosePathButtonWrapper{
+        width: 80%;
+        margin: 12px auto;
+    }
+    .ChoosePathButton{
+        padding: 6px 5px;
+        margin: 3px;
+    }
+
+    .react-autosuggest__input:focus{
+        /* border: 1px solid #ccc; */
+        border-radius: 20px 20px 0 0;
+        border-bottom: none;
+        outline: none;
+        box-shadow: 0px 0px 12px 3px #ccc; 
+        
+    }
+    .InsuranceSuggestionsListItem{
+        font-size: 14px;
+        padding: 3px 10px; 
+    }
+    .react-autosuggest__input::placeholder{
+        font-size: 14px;
+    }
+}

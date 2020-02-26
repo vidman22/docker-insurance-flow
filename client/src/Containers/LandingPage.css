@@ -1,0 +1,262 @@
+.FoundHealthPlan,
+.FoundMedicalGroup,
+.FoundPCP{
+    width: 98%;
+    /* border-bottom: .5px solid grey; */
+    /* text-align: left; */
+    margin: 12px auto;
+    transition: all .6s ease-in;
+}
+
+.FoundCard{
+    border: .5px solid grey;
+    width: 64%;
+    border-radius: 8px;
+    display: block;
+    margin: 12px auto;
+    padding: 0px;
+}
+
+.FoundHealthPlan h2,
+.FoundMedicalGroup h2,
+.FoundPCP h2{
+    text-align: left;
+    margin: 12px 0 0 0;
+    font-size: 30px;
+    border-bottom: .5px solid grey;
+}
+
+.FoundHealthPlan h4,
+.FoundMedicalGroup h4,
+.FoundPCP h4{
+
+    margin: 0px 0 0 6px;
+    padding: 8px;
+    font-size: 20px;
+}
+.FoundCard a{
+    color: #55ba80;
+}
+
+.FoundCard:empty{
+    display: none;
+}
+
+.LandingPageWrapper{
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+}
+
+/* .LandingPageWrapper p {
+    line-height: 28px;
+} */
+h1.InsuranceCheckerTitle {
+    font-family: 'brandon-regular', sans-serif;
+    width: fit-content;
+    display: block;
+    margin: 0px auto 30px;
+    font-weight: 300;
+}
+
+
+.ResetButton{
+    display: block;
+    background-color: #55ba80;
+    border: none;
+    color: white;
+    padding: 8px 16px 9px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+    /* line-height: 0px; */
+    cursor: pointer;
+    /* transition: 0.2s ease-in; */
+}
+
+.ResetButton:hover{
+    /* box-shadow: 0px 0px 8px 4px #eee; */
+    color: black;
+}
+
+
+.PCPFoundWrapper{
+    box-sizing: border-box;
+    /* padding: 10px; */
+    /* box-shadow: 0px 0px 4px 4px #eee; */
+    /* border-bottom: .5px solid grey; */
+    margin: 9px;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    transition: all .6s ease-out;
+}
+
+.PPOExceptionWrapper{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    width: auto;
+    margin: -10px 0 10px 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.PPOExceptionWrapper p{
+    margin: 0;   
+}
+.PPOExceptionWrapper li{
+    font-size: 16px;  
+}
+
+.PPOExceptionWrapper ul{
+    list-style: none;
+    padding: 2px 0 0 12px;
+    margin: 12px 0 0 0;
+    margin-block-start: 0em;
+    height: fit-content;
+    
+}
+
+.PPOException{
+    margin: 2px 0 0 0px;
+    font-size: 14px;
+}
+
+h1 span{
+    font-weight: lighter;
+    margin-left: 5px;
+}
+
+.MedicalGroupFoundImg{
+    display: inline;
+    height: 90px;
+}
+
+.Reveal{
+    animation: reveal .6s  ease-in forwards;
+}
+
+h1#AllSet {
+    color: white;
+    margin: 10px 0 8px 10px;
+    width: fit-content;
+    display: inline-block;
+}
+
+.PPOFinishedWrapper{
+    width: 100%;
+    /* margin: auto; */
+    border-bottom: 1px solid #55ba80;
+    background-color: #78c89a;
+    color: white;
+    /* background-color: none; */
+
+    
+    border-radius: 8px 8px 0 0;
+    text-align: left;
+    animation: reveal .6s ease-out forwards;
+}
+
+.PPOFinishedWrapper span,
+.PPOFinishedWrapper p{
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.ScheduleAppointmentLink {
+    display: inline-block;
+    color: white;
+    font-size: 1.5em;
+    background-color: #55ba80;
+    padding: 10px;
+    /* border: 1px solid #55ba80; */
+    border-radius: 3px;
+    margin: 18px 5px 18px 16%;
+    text-decoration: none;
+    width: 220px;
+}
+
+.ScheduleAppointmentLink:hover{
+    background-color: #55ba80;
+    color: black;
+} 
+
+.FoundHealthPlan span#UrgentCareCaveat{
+    display: block;
+    font-size: 15px;
+    margin: -10px 0 12px 12px;
+}
+
+
+@keyframes reveal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .FoundCard{
+        width: 90%;
+    }
+
+    .HealthPlanNotFoundWrapper{
+        width: 95%;   
+    }
+
+    .ResetButton{
+        padding: 6px 10px 7px;
+        border-radius: 4px;
+        font-size: 14px;
+        display: block;
+        float: none;
+    }
+
+    h1.InsuranceCheckerTitle {
+        margin: 15px auto 30px;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 530px){
+    a.ScheduleAppointmentLink {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .PPOExceptionWrapper{
+        flex-direction: column;
+    }
+
+    .FoundHealthPlan h2,
+    .FoundMedicalGroup h2,
+    .FoundPCP h2{
+        font-size: 20px;
+    }
+
+    .FoundHealthPlan h4,
+    .FoundMedicalGroup h4,
+    .FoundPCP h4{
+        font-size: 15px;
+        margin-left: 3px;
+    }
+
+    h1.InsuranceCheckerTitle{
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
+
+    h1#AllSet {
+        
+        margin: 8px;
+        font-size: 32px;
+    }
+    
+}

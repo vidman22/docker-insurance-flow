@@ -1,0 +1,119 @@
+
+.MedicalGroupRenderedBelowNoHover{
+    height: 30px;
+    padding: 5px 10px 5px 20px;
+    border-bottom: .5px solid grey;
+    width: 85%;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 6px 0px;
+    transition: .2s ease-in;
+}
+
+
+#MedicalGroupNotSureButton{
+    float: right;
+    margin: 10px 20% 0 0;
+    font-size: 22px;
+    color: #55ba80;
+}
+
+.MedicalGroupMessageWrapper{
+    width: 65%;
+    display: block;
+    margin: auto;
+    font-size: 20px;
+}
+
+.MedicalGroupMessageWrapper a{
+    text-decoration: none;
+    color:#55ba80;
+}
+
+.MedicalGroupMessageWrapper a:hover{
+    text-decoration: underline;
+}
+
+.MedicalGroupSuggestion{
+    height: 30px;
+    width: auto;
+    padding: 5px 10px 5px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 0 -40px;
+}
+
+.MedicalGroupSuggestion:empty{
+    display: none;
+}
+
+.MedicalGroupSuggestion:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #55ba80;
+}
+
+.ScrollablePCPList{
+    display: block;
+    margin: 20px;
+    /* height: 400px; */
+    width: 100%;
+}
+
+.MedicalGroupListWrapper{
+    margin: 20px;
+}
+
+#MedicalGroupChoosePathButton{
+    display: block;
+    float: right;
+    margin-top: 25px;
+    margin-right: 20%;
+}
+
+.HMOExplanationWrapper h3{
+    border-bottom: .5px solid grey;
+}
+.HMOExplanationWrapper p{
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+    .MedicalGroupMessageWrapper{
+        width: 95%;
+      
+    }
+    .ScrollablePCPList{
+        display: block;
+        height: 400px;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    #MedicalGroupNotSureButton{
+        float: none;
+        margin: -10px 0 0 18px;
+        font-size: 20px;
+    }
+
+    .MedicalGroupSuggestion{
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .HMOExplanationWrapper img{
+        height: 150px;
+    }
+    .HMOExplanationWrapper p{
+        font-size: 14px;
+        margin: 0 auto;
+    }
+    #MedicalGroupNotSureButton{
+        float: none;
+        margin: -10px 0 0 18px;
+        font-size: 14px;
+    }
+}
