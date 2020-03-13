@@ -1,0 +1,37 @@
+os:
+    - linux
+    sudo: required
+    services:
+      - docker
+    
+    before_install:
+      - sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    
+    script:
+      - docker build -t jviddie/insurance-flow-client ./client
+      - docker build -t jviddie/insurance-flow-server ./server
+      - docker build -t jviddie/insurance-flow-nginx ./nginx
+    
+    after_success:
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    
+      - docker push jviddie/insurance-flow-client
+      - docker push jviddie/insurance-flow-server
+      - docker push jviddie/insurance-flow-nginx
+    
+      - echo -e "$CA" > $HOME/.docker/ca.pem
+      - echo -e "$CERT" > $HOME/.docker/cert.pem
+      - echo -e "$KEY" > $HOME/.docker/key.pem
+    
+      - export DOCKER_TLS_VERIFY="1"
+      - export DOCKER_HOST="${HOST}"
+      - export DOCKER_CERT_PATH="$HOME/.docker"
+    
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    
+      - docker pull jviddie/insurance-flow-client
+      - docker pull jviddie/insurance-flow-server
+      - docker pull jviddie/insurance-flow-nginx
+      
+      - docker-compose up -d
+      - docker image prune -a y

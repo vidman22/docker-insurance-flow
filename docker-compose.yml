@@ -1,0 +1,16 @@
+version: '3'
+services:
+    nginx:
+        restart: always
+        image: 'jviddie/insurance-flow-nginx'
+        ports:
+            - '80:80'
+            - '443:443'
+        environment:
+            - EMAIL=jvidmar37@gmail.com
+            - URL=primarycarecompany.com
+            - SUBDOMAINS=www
+    client:
+        image: 'jviddie/insurance-flow-client'
+    api:
+        image: 'jviddie/insurance-flow-server'
